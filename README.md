@@ -1,4 +1,4 @@
-## es6-browserify-boilerplate
+## es6-gulp-boilerplate
 The project contains a boilerplate for ES6 projects.
 
 ### Project goal
