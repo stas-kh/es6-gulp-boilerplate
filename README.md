@@ -7,8 +7,8 @@ The main idea is to compile ES6 code using babel, browserify and gulp. The goal 
 ### Initial setup
 ```bash
 # Clone the repo...
-git clone https://github.com/stas-kh/es6-browserify-boilerplate
-cd es6-browserify-boilerplate
+git clone https://github.com/stas-kh/es6-gulp-boilerplate
+cd es6-gulp-boilerplate
 
 # Project uses Yarn as package manager, so you have to install it globally
 npm install -g yarn
