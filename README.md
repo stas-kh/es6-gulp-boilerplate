@@ -17,8 +17,8 @@ npm install -g yarn
 run-gulp.bat
 ```
 
-### Usage
-#### Preparation
+## Usage
+### Preparation
 To make a build version run:
 
 ```
@@ -26,17 +26,16 @@ run-gulp.bat
 ```
 
 It runs gulp and enables watching changes in source code by means of gulp.watch.
-Then you are able to make any changes in source files.
 
-#### How to make changes
+### How to make changes
 Gulp will rebuild your project each time when change has been done.
-All changes have to be done in *src* folder.
+All the changes should be done in *src* folder.
 
-[**Javascript**]
+#### JavaScript
 All required modules should be stored as a sub-folders, for example *src/js/new-panel/* and each module should be exported to be used in another modules or *index.js* file
 
-[**CSS**]
+#### Styles
 All CSS files should be located in: *src/css/* folder.
 
-[**HTML**]
+#### HTML
 HTML file is located in *src/index.html* folder. You do not have to add references on your own JavaScript or CSS files into index.html, it should have only your HTML markups and links on external resources (such as fonts, libraries, external css files etc.)
