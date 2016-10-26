@@ -10,7 +10,8 @@ let gulp = require("gulp"),
 	sourcemaps = require("gulp-sourcemaps"),
 	concat = require("gulp-concat"),
 	cleanCSS = require("gulp-clean-css"),
-	replace = require("gulp-replace");
+	replace = require("gulp-replace"),
+	eslint = require("gulp-eslint");
 
 // Config contains additional variables to be able to set up gulp tasks easier
 const config = {
@@ -64,6 +65,14 @@ gulp.task("copy:html", () => {
 		.pipe(gulp.dest(`${config.destFolder}/`))
 });
 
+
+// The task checks code style for JavaScript
+gulp.task("lint", () => {
+	return gulp.src("src/js/**/*")
+		.pipe(eslint())
+		.pipe(eslint.format())
+});
+
 // Watch allows to observe each change in source files to re-compile the code
 /*
 	For WebStorm users:
@@ -73,8 +82,8 @@ gulp.task("copy:html", () => {
  */
 gulp.task("watch", () => {
 	gulp.watch(config.paths.css, ["minify:css"]);
-	gulp.watch(config.paths.js, ["compile:js"]);
+	gulp.watch(config.paths.js, ["compile:js", "lint"]);
 	gulp.watch(config.paths.html, ["copy:html"]);
 });
 
-gulp.task("default", ["compile:js", "minify:css", "copy:html", "watch"]);
+gulp.task("default", ["compile:js", "lint", "minify:css", "copy:html", "lint", "watch"]);

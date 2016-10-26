@@ -1,3 +1,3 @@
-import test from "./foo/bar";
+import example from './foo/bar';
 
-console.log(test);
+example.test = true;
