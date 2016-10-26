@@ -16,3 +16,27 @@ npm install -g yarn
 # Then, you should run the following command in your terminal
 run-gulp.bat
 ```
+
+### Usage
+#### Preparation
+To make a build version run:
+
+```
+run-gulp.bat
+```
+
+It runs gulp and enables watching changes in source code by means of gulp.watch.
+Then you are able to make any changes in source files.
+
+#### How to make changes
+Gulp will rebuild your project each time when change has been done.
+All changes have to be done in *src* folder.
+
+[**Javascript**]
+All required modules should be stored as a sub-folders, for example *src/js/new-panel/* and each module should be exported to be used in another modules or *index.js* file
+
+[**CSS**]
+All CSS files should be located in: *src/css/* folder.
+
+[**HTML**]
+HTML file is located in *src/index.html* folder. You do not have to add references on your own JavaScript or CSS files into index.html, it should have only your HTML markups and links on external resources (such as fonts, libraries, external css files etc.)
