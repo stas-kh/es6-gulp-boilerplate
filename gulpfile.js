@@ -82,8 +82,8 @@ gulp.task("lint", () => {
  */
 gulp.task("watch", () => {
 	gulp.watch(config.paths.css, ["minify:css"]);
-	gulp.watch(config.paths.js, ["compile:js", "lint"]);
+	gulp.watch(config.paths.js, ["lint", "compile:js"]);
 	gulp.watch(config.paths.html, ["copy:html"]);
 });
 
-gulp.task("default", ["compile:js", "lint", "minify:css", "copy:html", "lint", "watch"]);
+gulp.task("default", ["lint", "compile:js", "minify:css", "copy:html", "watch"]);
