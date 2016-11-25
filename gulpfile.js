@@ -59,7 +59,7 @@ gulp.task("minify:css", function() {
 
 // The task copies HTML file to dist folder, it helps to have a production version of the project in one folder
 gulp.task("copy:html", () => {
-	return gulp.src("index.html")
+	return gulp.src("./src/index.html")
 		// It replaces pathes to JS and CSS files inside HTML code
 		.pipe(replace(new RegExp(`../${config.destFolder}/`, "g"), ""))
 		.pipe(gulp.dest(`${config.destFolder}/`))
